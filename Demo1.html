@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company Website</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.0.1/js/bootstrap.bundle.min.js"></script>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      font-weight: bold;
+      color: #000;
+    }
+
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px;
+      background-color: #f8f9fa;
+    }
+
+    .navbar-logo {
+      display: flex;
+      align-items: center;
+      font-size: 1.2rem;
+    }
+
+    .navbar-logo img {
+      height: 40px;
+      margin-right: 10px;
+    }
+
+    .navbar-links {
+      display: flex;
+      align-items: center;
+    }
+
+    .navbar-links a {
+      margin-left: 10px;
+    }
+
+    .company-logo {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      width: 100vw;
+      height: 100vh;
+      background-image: url("IMG1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center center;
+    }
+
+    .login-form {
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin-right: 20px;
+      max-width: 400px;
+    }
+
+    .login-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .login-form input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .login-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .login-form button:hover {
+      background-color: #0069d9;
+    }
+
+    .registration-form {
+      display: none; /* Hide the registration form by default */
+      background-color: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      margin-right: 20px;
+      max-width: 400px;
+    }
+
+    .registration-form label {
+      display: block;
+      margin-bottom: 10px;
+    }
+
+    .registration-form input {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+    }
+
+    .registration-form button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    .registration-form button:hover {
+      background-color: #0069d9;
+    }
+  </style>
+  <script>
+    // Function to show the registration form
+    function showRegistrationForm() {
+      document.querySelector(".login-form").style.display = "none";
+      document.querySelector(".registration-form").style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid">
+        <div class="navbar-logo">
+          <img src="OP.jpg" alt="Company Logo">
+          <span>TRANFORMERS</span>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="partsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Parts</a>
+              <ul class="dropdown-menu" aria-labelledby="partsDropdown">
+                <li><a class="dropdown-item" href="#">Part 1</a></li>
+                <li><a class="dropdown-item" href="#">Part 2</a></li>
+                <li><a class="dropdown-item" href="#">Part 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="departmentsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Departments</a>
+              <ul class="dropdown-menu" aria-labelledby="departmentsDropdown">
+                <li><a class="dropdown-item" href="#">Department 1</a></li>
+                <li><a class="dropdown-item" href="#">Department 2</a></li>
+                <li><a class="dropdown-item" href="#">Department 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="usersDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Users</a>
+              <ul class="dropdown-menu" aria-labelledby="usersDropdown">
+                <li><a class="dropdown-item" href="#">User 1</a></li>
+                <li><a class="dropdown-item" href="#">User 2</a></li>
+                <li><a class="dropdown-item" href="#">User 3</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Miscellaneous</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="queriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Queries</a>
+              <ul class="dropdown-menu" aria-labelledby="queriesDropdown">
+                <li><a class="dropdown-item" href="#">Query 1</a></li>
+                <li><a class="dropdown-item" href="#">Query 2</a></li>
+                <li><a class="dropdown-item" href="#">Query 3</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  
+
+  <div class="company-logo">
+    <div class="container">
+      <div class="row justify-content-end">
+        <div class="col-md-4">
+          <div class="login-form">
+            <form>
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" required>
+              
+              <label for="employee-id">Employee ID</label>
+              <input type="text" id="employee-id" name="employee-id" required>
+              
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" required>
+              
+              <button type="submit">Login</button>
+              <button type="button" onclick="showRegistrationForm()">New User</button>
+            </form>
+          </div>
+          
+          <div class="registration-form">
+            <form>
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" required>
+              
+              <label for="department">Department</label>
+              <input type="text" id="department" name="department" required>
+              
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" required>
+              
+              <label for="employee-id-reg">Employee ID</label>
+              <input type="text" id="employee-id-reg" name="employee-id-reg" required>
+              
+              <label for="address">Address</label>
+              <input type="text" id="address" name="address" required>
+              
+              <label for="birthdate">Birthdate</label>
+              <input type="date" id="birthdate" name="birthdate" required>
+              
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+              </select>
+              
+              <label for="password-reg">Password</label>
+              <input type="password" id="password-reg" name="password-reg" required>
+              
+              <label for="confirm-password">Confirm Password</label>
+              <input type="password" id="confirm-password" name="confirm-password" required>
+              
+              <button type="submit">Register</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
